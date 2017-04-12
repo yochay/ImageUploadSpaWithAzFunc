@@ -39,8 +39,6 @@ public static void Run( ICloudBlob inputBlob, ICollector<ImageText> outputTable,
             log.Info($"stream length = {imageFileStream.Length}"); // just to verify
 
             // Init MS Cognative Services
-            //var visionClient = new VisionServiceClient("cac68b20bbfa40c4bd7860a3f639c201");
-            //var visionClient = new VisionServiceClient("d22e09b5466e4db39568dd02cab3e71c");
             var visionClient = new VisionServiceClient(System.Environment.GetEnvironmentVariable("OCR_KRY") );
             
 
