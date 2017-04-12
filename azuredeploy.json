@@ -40,17 +40,7 @@
                 "accountType": "[variables('storageAccountType')]"
             }
         },
-        {
-            "apiVersion": "2015-08-01",
-            "name": "[variables('appServicePlanName')]",
-            "type": "Microsoft.Web/serverfarms",
-            "location": "[parameters('location')]",
-            "properties": {
-                "name": "[variables('appServicePlanName')]",
-                "computeMode": "Dynamic",
-                "sku": "Dynamic"
-            }
-        },
+
         {
             "apiVersion": "2015-08-01",
             "name": "[parameters('siteName')]",
