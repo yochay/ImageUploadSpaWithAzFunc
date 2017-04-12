@@ -13,7 +13,7 @@ using Microsoft.WindowsAzure.Storage.Blob;
 //Using CloudBlobContainer to upload multiple images vs. single blob
 public static HttpResponseMessage Run(HttpRequestMessage req, CloudBlobContainer  inputContainer, TraceWriter log) 
 { 
-    System.Diagnostics.Debugger.Launch();
+
     log.Info($"Webhook was triggered!");  
 
     HttpResponseMessage result = null; 

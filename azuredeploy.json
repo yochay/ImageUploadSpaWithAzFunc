@@ -63,7 +63,14 @@
             ],
             "properties": {
                 "serverFarmId": "[variables('appServicePlanName')]",
-                "alwaysOn": true
+                "alwaysOn": true,
+                "siteConfig": {
+                    "cors": {
+                        "allowedOrigins": [
+                            "*"
+                        ]
+                    }
+                }
             },
             "resources": [
                 {
@@ -78,9 +85,9 @@
                         "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
                         "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listKeys(variables('storageAccountid'),'2015-05-01-preview').key1)]",
                         "FUNCTIONS_EXTENSION_VERSION": "~1",
-                        "ROUTING_EXTENSION_VERSION" :"~0.1",
+                        "ROUTING_EXTENSION_VERSION": "~0.1",
                         "OCR_KRY": "[parameters('OcrAPIKey')]",
-                        "PROJECT" : "FuncApp"
+                        "PROJECT": "FuncApp"
                     }
                 },
                 {
