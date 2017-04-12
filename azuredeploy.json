@@ -40,7 +40,17 @@
                 "accountType": "[variables('storageAccountType')]"
             }
         },
-
+        {
+            "apiVersion": "2015-08-01",
+            "name": "[variables('appServicePlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "B1",
+                "tier": "Basic"
+            },
+            "properties": {}
+        },
         {
             "apiVersion": "2015-08-01",
             "name": "[parameters('siteName')]",
@@ -48,7 +58,8 @@
             "kind": "functionapp",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+                "[resourceId('Microsoft.Web/serverfarms', parameters('siteName'))]"
             ],
             "properties": {
                 "serverFarmId": "[variables('appServicePlanName')]",
