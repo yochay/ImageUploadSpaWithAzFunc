@@ -1,61 +1,5 @@
 {
     "proxies": {
-        "proxy1": {
-            "matchCondition": {
-                "methods": [
-                    "GET"
-                ],
-                "route": "/helloworld"
-            },
-            "backendUri": "https://gibraltar-apis.azurewebsites.net/api/HelloWorldAPI"
-        },
-        "transform route to query1": {
-            "matchCondition": {
-                "route": "/getString/"
-            },
-            "backendUri": "https://gibraltar-apis.azurewebsites.net/api/GetString?code=%GIBRALTER_API_KEY%"
-        },
-        "transform route to query": {
-            "matchCondition": {
-                "route": "V1/getString/{id}",
-                "methods": [
-                    "GET"
-                ]
-            },
-            "backendUri": "https://%BASE_URL%/api/GetString?code=%FUNC1_API_KEY%&stringid={id}"
-        },
-        "No Op Api With built in Delay": {
-            "matchCondition": {
-                "methods": [
-                    "POST"
-                ],
-                "route": "noopapiwithdelay/{delay}"
-            },
-            "backendUri": "https://gibraltar-apis.azurewebsites.net/api/NoOpApiWithDelay?code=IkxeeD2rtCcow1vmBqXhfiHL065fC9CgpHtNyEvu/JPg84dBfGShCQ==&delay={delay}"
-        },
-        "px6 - Example of Json output ": {
-            "matchCondition": {
-                "methods": [
-                    "GET"
-                ],
-                "route": "Mock/{id}"
-            }
-        },
-        "cool name goes here": {
-            "matchCondition": {
-                "route": "/goog"
-            },
-            "backendUri": "https://www.google.com/"
-        },
-        "new api": {
-            "matchCondition": {
-                "methods": [
-                    "POST"
-                ],
-                "route": "/newapidemo/category/{cat}/id/{id}"
-            },
-            "backendUri": "https://func-vs-integration.azurewebsites.net/api/HttpTriggerApiToQNodeJS?code=x08QJH7ZQmWsFse0lgIyx3qX9YXjezo66ISCbetuM6x4Owj3rNhQcw==&category={cat}&qid={id}"
-        },
         "default document": {
             "matchCondition": {
                 "route": "/site/"
@@ -68,7 +12,7 @@
             },
             "backendUri": "https://tryfunctionsdemo.blob.core.windows.net/static-site/{filename}?sv=2015-12-11&ss=b&srt=sco&sp=r&se=2020-03-01T12:24:50Z&st=2017-03-01T04:24:50Z&spr=https&sig=IPa1yPG3lW4Xx%2FM2IlOivK8O90zvHvRhoyXWftdhWJo%3D"
         },
-        "static content 2": {
+        "static content js": {
             "matchCondition": {
                 "route": "/site/js/{filename}"
             },
