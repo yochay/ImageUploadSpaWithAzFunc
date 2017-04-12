@@ -45,11 +45,11 @@
             "name": "[variables('appServicePlanName')]",
             "type": "Microsoft.Web/serverfarms",
             "location": "[parameters('location')]",
-            "sku": {
-                "name": "B1",
-                "tier": "Basic"
-            },
-            "properties": {}
+            "properties": {
+                "name": "[variables('appServicePlanName')]",
+                "computeMode": "Dynamic",
+                "sku": "Dynamic"
+            }
         },
         {
             "apiVersion": "2015-08-01",
