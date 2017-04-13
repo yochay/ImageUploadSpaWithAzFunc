@@ -51,5 +51,5 @@ Deploying from Source Control (like this git repo), locks the portal for any edi
 ### Running the demo locally in Visual Studio
 
 - Open the project ImageUploadClassLib.sln
-- Open the file [HtmlSpa\local-try-functions.html](HtmlSpa\local-try-functions.html)
+- Open the file [HtmlSpa/local-try-functions.html](HtmlSpa/local-try-functions.html)
 - Run the Functions host via `func host start`. If you've set up the project in Visual Studio, just F5 or control-F5.
