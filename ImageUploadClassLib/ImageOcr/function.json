@@ -1,0 +1,21 @@
+{
+  "scriptFile": "..\\bin\\ImageUploadClassLib.dll",
+  "entryPoint": "ImageUploadClassLib.ImageOcr.Run",
+  "bindings": [
+    {
+      "name": "inputBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "%INPUT_CONTAINER%",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "ImagesText",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
