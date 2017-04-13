@@ -5,14 +5,15 @@
 ## About this demo
 * this demo is based of on [Get some hands-on time with Serverless development right now, for free](https://blogs.msdn.microsoft.com/appserviceteam/2016/10/04/get-some-hands-on-time-with-serverless-development-right-now-for-free/) blog.
 * This demo includes a Functions exposing few APIs to upload images to blob, run OCR on the images, and get list of images.
+* This demo is .NET (C#) based. The repo includes two version of the same demo. A C# scripting version (edit code in the Azure Functions Portal) and a pre-compiled assembly version, which you can run locally using Visual Studio and deploy to the cloud. The ImageUploadClassLib folder includes a pre-compiled .net version of the demo.
 * Function uses Azure Cognative Services (vision) to perform the OCR
-* This demo includes static HTML (SPA) that can be used with the Functions API to upload and view images. Static HTML can be run locally (for testing) and can also be hosted on Azure blob. 
+* This demo includes static HTML (SPA) that can be used with the Functions API to upload and view images. Static HTML can be run locally (for testing) and can also be hosted on Azure blob.
 * Using Azure Function proxies, you can create a simple URL for the static HTML page (note, initially, you will need to override the proxy settings)
-* You can findseveral test images in SampleImages
+* You can findseveral test images in Sample-Images.
 
 ## Running the demo
 
-### Demo Setup
+### Demo Setup for C# Scripting 
 
 1. Fork the repo into your own GitHub
 
