@@ -47,3 +47,5 @@
 Deploying from Source Control (like this git repo), locks the portal for any editing expereince. To reenable portal edting 
 * Open the Function App you just deployed. Go to Function App settings -> Configure Continuous Integration. In the command bar, select **Disconnect**.
 * Close and reopen the Function App. Verify that you can edit code in CardGenerator -> Develop.
+
+* OCR-Key  d22e09b5466e4db39568dd02cab3e71c
