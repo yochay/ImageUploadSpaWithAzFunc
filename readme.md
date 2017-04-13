@@ -47,3 +47,9 @@
 Deploying from Source Control (like this git repo), locks the portal for any editing expereince. To reenable portal edting 
 * Open the Function App you just deployed. Go to Function App settings -> Configure Continuous Integration. In the command bar, select **Disconnect**.
 * Close and reopen the Function App. Verify that you can edit code in CardGenerator -> Develop.
+
+### Running the demo locally in Visual Studio
+
+- Open the project ImageUploadClassLib.sln
+- Open the file [HtmlSpa\local-try-functions.html](HtmlSpa\local-try-functions.html)
+- Run the Functions host via `func host start`. If you've set up the project in Visual Studio, just F5 or control-F5.
